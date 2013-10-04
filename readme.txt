@@ -39,9 +39,9 @@ Slideshow captions are taken from each image's "Caption" field. Upload and use u
 
 Slideshow widths should automatically adjust to the smaller of: 1) the width of the largest image in the slideshow or 2) the width of the container it appears in.
 
-The height / width of the image area is set according the image(s) with the largest dimensions. Images are centered and aligned to the bottom of the image area. White space will appear on top of some slides if the slideshow contains both horizontal and vertical images.
+The height / width of the image area is set according the image(s) with the largest dimensions. By default images are scaled to fit the width of the slideshow container and bottom aligned. White space will appear on top of some slides if the slideshow contains both horizontal and vertical images.
 
-Large images area are scaled down to fit in the slideshow, but smaller images appear at full size (i.e. aren't scaled up.) Slideshows perform best if images are sized to desired slideshow width / container.
+Slideshows perform best if images are sized to desired slideshow width / container.
 
 Default CSS ids begin with "gss_", classes with "cycle-". Default slideshow id is "gslideshow". Default CSS styles were created using the Twenty Thirteen theme -- some CSS customization may be necessary for other themes.
 

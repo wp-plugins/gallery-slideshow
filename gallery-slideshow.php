@@ -50,8 +50,7 @@ class gallery_ss{
 		data-cycle-pager="#' . $name . '_pager" 
 		' . $captions_options . ' 
 		data-cycle-pager-template="<a href=#>&nbsp;</a>" 
-		data-cycle-speed="750" 
-		data-cycle-center-horz=true
+		data-cycle-speed="750"
 		>';
 		if( $has_captions ){
 			$html .= $pager;
@@ -72,11 +71,9 @@ class gallery_ss{
 
     static function gss_enqueue_scripts() {
         wp_register_script( 'cycle2', plugins_url( 'jquery.cycle2.min.js' , __FILE__ ), array('jquery'), '2' );
-		wp_register_script( 'cycle2_center', plugins_url( 'jquery.cycle2.center.min.js' , __FILE__ ), array('cycle2'), '2' );
 		wp_register_script( 'gss_js', plugins_url( 'gss.js' , __FILE__ ) );
 		wp_register_style( 'gss_css', plugins_url( 'gss.css' , __FILE__ ) );
 		wp_enqueue_script( 'cycle2' );
-		wp_enqueue_script( 'cycle2_center' );
 		wp_enqueue_script( 'gss_js' );
 		wp_enqueue_style( 'gss_css' );
     }
