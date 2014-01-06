@@ -2,7 +2,7 @@
 Contributors: jethin
 Tags: slideshow, gallery
 Requires at least: 3.0
-Tested up to: 3.6.1
+Tested up to: 3.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -46,6 +46,8 @@ Slideshows perform best if images are sized to desired slideshow width / contain
 Default CSS ids begin with "gss_", classes with "cycle-". Default slideshow id is "gslideshow". Default CSS styles were created using the Twenty Thirteen theme -- some CSS customization may be necessary for other themes.
 
 Links aren't supported on images, but can be entered as HTML in image captions.
+
+Custom slideshow options, such as autoplay, can be implemented via a "gss-custom.js" file inside the Gallery Slideshow plugin directory. See the sample "gss-custom.js"  in the /assets/ directory for an example. See the Cycle2 website for documentation on supported options.
 
 This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may conflict with previous versions of Cycle if used on the same page.
 
