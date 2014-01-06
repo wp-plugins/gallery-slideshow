@@ -47,7 +47,7 @@ Default CSS ids begin with "gss_", classes with "cycle-". Default slideshow id i
 
 Links aren't supported on images, but can be entered as HTML in image captions.
 
-Custom slideshow options, such as autoplay, can be implemented via a "gss-custom.js" file inside the Gallery Slideshow plugin directory. See the sample "gss-custom.js"  in the /assets/ directory for an example. See the Cycle2 website for documentation on supported options.
+Custom slideshow options, such as autoplay, can be implemented by placing a "gss-custom.js" file inside the Gallery Slideshow plugin directory. An example "gss-custom.js"  can be found in the /assets/ directory. See the Cycle2 website for documentation on supported options.
 
 This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may conflict with previous versions of Cycle if used on the same page.
 
