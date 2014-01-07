@@ -65,7 +65,12 @@ This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may c
 == Changelog ==
 
 = 1.1 =
-* Loads "gss-custom.js" -- which can be used to alter default slideshow options -- if it is present in the /gallery-slideshow/ plugin directory. Sample 'gss-custom.js' file included inside /assets/ directory.
+* Loads 'gss-custom.js' -- which can be used to alter default slideshow options -- if it is present in the /gallery-slideshow/ plugin directory. Sample 'gss-custom.js' file included inside /assets/ directory.
 
 = 1.0 =
 * Initial release.
+
+== Upgrade Notice ==
+
+= 1.1 =
+Plugin now supports custom options via inclusions of optional 'gas-custom.js' file.
