@@ -61,3 +61,11 @@ This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may c
 
 1. The "Edit Page" admin screen showing the WP editor in text mode and a sample gss shortcode.
 2. A screen capture of a GSS slideshow in the Twenty Thirteen theme. [See here](http://s89693915.onlinehome.us/wp/?page_id=4) to view a working slideshow.
+
+== Changelog ==
+
+= 1.1 =
+* Loads "gss-custom.js" -- which can be used to alter default slideshow options -- if it is present in the /gallery-slideshow/ plugin directory. Sample 'gss-custom.js' file included inside /assets/ directory.
+
+= 1.0 =
+* Initial release.
