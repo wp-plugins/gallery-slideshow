@@ -2,9 +2,9 @@
 /*
 Plugin Name: Gallery Slideshow
 Description: Turn any WordPress gallery into a slideshow using the "gss" shortcode.
-Version: 1.0
+Version: 1.1
 Author: Jethin
-Author URI: 
+Author URI: http://s89693915.onlinehome.us/wp/?page_id=4
 License: GPL2
 */
 
