@@ -1,9 +1,9 @@
-=== Gallery Slideshow ===
+=== Gallery <-> Slideshow ===
 Contributors: jethin
 Tags: slideshow, gallery
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,29 +25,31 @@ becomes:
 
 To make changes to your slideshow change the shortcode back to "gallery" (in "Text" mode) and make edits using the visual editor / media manager.
 
-The plugin supports two optional attributes:
+The plugin supports three optional shortcode attributes:
 
-`[gss ids="1,2,3" name="myslideshow" style="width:50%"]`
+`[gss ids="1,2,3" name="myslideshow" options="timeout=auto" style="width:50%"]`
 
 *name*: Use this attribute to give slideshow(s) unique ids (applied to container `<div>`). Give each slideshow a unique name / id when displaying multiple slideshows on a single page.
 
-*style*: Inline CSS styles applied to the slideshow container. Display string is prefaced with "style=" and must contain standard "property:value;" syntax.
+*options*: This attribute can be used to override default slideshow options or set custom options. Attribute value uses query string format, e.g.: 'option1=value1&option2=value2' etc. Option names are in standard Cycle2 format *without 'data-cycle' prefix*. [See the Cycle2 website](http://jquery.malsup.com/cycle2/api/#options) for documentation and supported options.
+
+*style*: Inline CSS styles applied to the slideshow container. Outputted string is prefaced with "style=" and must contain standard "property:value;" syntax.
 
 **Notes**
 
 Slideshow captions are taken from each image's "Caption" field. Upload and use unique versions of any images that are reused elsewhere on your site with different captions.
 
-Slideshow widths should automatically adjust to the smaller of: 1) the width of the largest image in the slideshow or 2) the width of the container it appears in.
+Slideshow widths should automatically adjust to the smaller of: 1) the width of the largest image in the slideshow or 2) the width of its container.
 
-The height / width of the image area is set according the image(s) with the largest dimensions. By default images are scaled to fit the width of the slideshow container and bottom aligned. White space will appear on top of some slides if the slideshow contains both horizontal and vertical images.
-
-Slideshows perform best if images are sized to desired slideshow width / container.
+Default Display: Height / width of slideshow image area is set by the first image; images appear at full size or are scaled down to fit container; smaller images are horizontally centered; images that above 90% of the width of the slideshow are scaled to 100% width; images are bottom aligned to caption area; some white space may appear at the top of slideshows that contain both horizontally and vertically aligned images.
 
 Default CSS ids begin with "gss_", classes with "cycle-". Default slideshow id is "gslideshow". Default CSS styles were created using the Twenty Thirteen theme -- some CSS customization may be necessary for other themes.
 
+Slideshows perform best if images are sized to desired slideshow width / container.
+
 Links aren't supported on images, but can be entered as HTML in image captions.
 
-Custom slideshow options, such as autoplay, can be implemented by placing a "gss-custom.js" file inside the Gallery Slideshow plugin directory. An example "gss-custom.js"  can be found in the /assets/ directory. See the Cycle2 website for documentation on supported options.
+In addition to the options attribute mentioned above, slideshows can be customized by placing a "gss-custom.js" file inside the Gallery Slideshow plugin directory. An example "gss-custom.js"  can be found in the /assets/ directory.
 
 This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may conflict with previous versions of Cycle if used on the same page.
 
@@ -64,6 +66,9 @@ This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may c
 
 == Changelog ==
 
+= 1.2 =
+* Added options shortcode attribute for customized slideshows; default display changes (css); more robust Javascript functions including reentering of images after window load.
+
 = 1.1 =
 * Loads 'gss-custom.js' -- which can be used to alter default slideshow options -- if it is present in the /gallery-slideshow/ plugin directory. Sample 'gss-custom.js' file included inside /assets/ directory.
 
@@ -71,6 +76,9 @@ This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may c
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.2 =
+Plugin now supports options shortcode attribute for customizing slideshows; default display and functionality improved.
 
 = 1.1 =
 Plugin now supports custom options via inclusions of optional 'gas-custom.js' file.

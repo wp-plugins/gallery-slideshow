@@ -5,7 +5,8 @@
 img.cycle-slide{
 	top:auto !important;
 	bottom:0 !important;
-	width:100%;	
+	max-width:100%;
+	max-height:100%;	
 }
 
 .gss-pager { 
@@ -41,6 +42,7 @@ img.cycle-slide{
 
 .gss-info { 
 	width:inherit;
+	position:relative;
 	background-color:#2E2E2E;
 	color:#fff;
 	font-size:110%;
