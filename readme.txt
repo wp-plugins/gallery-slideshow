@@ -27,11 +27,11 @@ To make changes to your slideshow change the shortcode back to "gallery" (in "Te
 
 The plugin supports three optional shortcode attributes:
 
-`[gss ids="1,2,3" name="myslideshow" options="timeout=auto" style="width:50%"]`
+`[gss ids="1,2,3" name="myslideshow" options="timeout=4000" style="width:50%"]`
 
 *name*: Use this attribute to give slideshow(s) unique ids (applied to container `<div>`). Give each slideshow a unique name / id when displaying multiple slideshows on a single page.
 
-*options*: This attribute can be used to override default slideshow options or set custom options. Attribute value uses query string format, e.g.: 'option1=value1&option2=value2' etc. Option names are in standard Cycle2 format *without 'data-cycle' prefix*. [See the Cycle2 website](http://jquery.malsup.com/cycle2/api/#options) for documentation and supported options.
+*options*: This attribute can be used to override default slideshow options or set custom options. Attribute value uses query string format, e.g.: 'option1=value1&option2=value2' etc. Option names are in standard Cycle2 format *without 'data-cycle-' prefix*. [See the Cycle2 website](http://jquery.malsup.com/cycle2/api/#options) for documentation and supported options.
 
 *style*: Inline CSS styles applied to the slideshow container. Outputted string is prefaced with "style=" and must contain standard "property:value;" syntax.
 
@@ -67,7 +67,7 @@ This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may c
 == Changelog ==
 
 = 1.2 =
-* Added options shortcode attribute for customized slideshows; default display changes (css); more robust Javascript functions including reentering of images after window load.
+* Added 'options' shortcode attribute for customized slideshows; default display changes (css); more robust Javascript functions including recentering of images after window load.
 
 = 1.1 =
 * Loads 'gss-custom.js' -- which can be used to alter default slideshow options -- if it is present in the /gallery-slideshow/ plugin directory. Sample 'gss-custom.js' file included inside /assets/ directory.
@@ -78,7 +78,7 @@ This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may c
 == Upgrade Notice ==
 
 = 1.2 =
-Plugin now supports options shortcode attribute for customizing slideshows; default display and functionality improved.
+Plugin now supports 'options' shortcode attribute for customizing slideshows; default display and functionality improved.
 
 = 1.1 =
 Plugin now supports custom options via inclusions of optional 'gas-custom.js' file.
