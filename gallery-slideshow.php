@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Gallery Slideshow
+Plugin Name: Gallery <-> Slideshow
 Description: Turn any WordPress gallery into a slideshow using the "gss" shortcode.
 Version: 1.3
 Author: Jethin
