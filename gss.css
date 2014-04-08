@@ -5,7 +5,7 @@
 img.cycle-slide{
 	top:auto !important;
 	bottom:0 !important;
-	max-width:100%;
+	max-width:100% !important;
 	max-height:100%;	
 }
 
@@ -124,3 +124,28 @@ img.cycle-slide{
 	opacity:.01;
 	filter:alpha(opacity=01);
 }
+
+/* carousel pager */
+
+.carousel-pager {
+	padding:2px;
+	margin:10px 10px 0 10px;
+}
+
+.carousel-pager .cycle-slide {
+	border-style:solid;
+	border-width:0 4px;
+	border-color:transparent !important;
+	vertical-align:top;
+	text-align:center;
+}
+
+.carousel-pager .cycle-slide img {
+	max-width:100% !important;
+	height:100%;
+	border:1px solid transparent;
+}
+
+.carousel-pager .cycle-slide-active img { border:1px solid #ccc; }
+
+.gss-black-bg { background-color:#000; }

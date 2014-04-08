@@ -9,10 +9,3 @@ jQuery( document ).on( 'cycle-bootstrap', function( e, opts, API ) {
 	opts.timeout = 4000;
 	// opts.speed = 500;
 });
-
-// Pause slideshow on next/previous
-jQuery( document ).ready(function() {
-	jQuery( '.gss-next, .gss-prev, .gss-pager > a' ).click(function() {
-		jQuery(this).closest( '.gss-container' ).children( '.cycle-slideshow' ).cycle('pause');
-	});
-});
