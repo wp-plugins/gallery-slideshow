@@ -3,7 +3,7 @@ Contributors: jethin
 Tags: slideshow, gallery
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,15 +25,33 @@ becomes:
 
 To make changes to your slideshow change the shortcode back to "gallery" (in "Text" mode) and make edits using the visual editor / media manager.
 
-The plugin supports three optional shortcode attributes:
+The plugin supports four optional shortcode attributes:
 
-`[gss ids="1,2,3" name="myslideshow" options="timeout=4000" style="width:50%"]`
+`[gss ids="1,2,3" name="myslideshow" options="timeout=4000" style="width:50%" carousel="fx=carousel"]`
 
 *name*: Use this attribute to give slideshow(s) unique ids (applied to container `<div>`). Give each slideshow a unique name / id when displaying multiple slideshows on a single page.
 
 *options*: This attribute can be used to override default slideshow options or set custom options. Attribute value uses query string format, e.g.: 'option1=value1&option2=value2' etc. Option names are in standard Cycle2 format *without 'data-cycle-' prefix*. [See the Cycle2 website](http://jquery.malsup.com/cycle2/api/#options) for documentation and supported options.
 
 *style*: Inline CSS styles applied to the slideshow container. Outputted string is prefaced with "style=" and must contain standard "property:value;" syntax.
+
+*carousel*: Set 'fx=carousel' value in this attribute to include a carousel pager navigation (thumbnails) in a slideshow. See the [Cycle2 Carousel](http://jquery.malsup.com/cycle2/demo/carousel.php) for documentation and supported options. Carousel options follow the same string format as the options attribute above.
+
+**Embed Slideshow (Experimental; requires version 1.3+)**
+
+To embed a slideshow on another site:
+
+1. Move the 'embed.js' and 'embed.php' files out of the plugin's /assets/ directory and into the main /gallery-slideshow/ directory.
+
+1. While editing a post/page with a slideshow, locate the slideshow's embed key in the "Custom Fields" meta box . (If the embed key isn't shown make sure the [gss …] shortcode exists in the visual editor and update the page/post.)
+
+1. Replace the all caps text below with 1) your site's URL/domain name and 2) the embed key to produce the embed code:
+
+`<script src="YOUR_SITES_DOMAIN/wp-content/plugins/gallery-slideshow/embed.js" data-embed="GSS_EMBED_KEY" type="text/javascript"></script><div id="gss-embed"></div>`
+
+*'data-target' attribute (optional)*: Add this attribute to the embed code to target a specific div by id (use unique ids if multiple slideshows are embedded on a page):
+
+`<script src="YOUR_SITES_DOMAIN/wp-content/plugins/gallery-slideshow/embed.js" data-embed="GSS_EMBED_KEY" data-target="UNIQUE_TARGET_NAME" type="text/javascript"></script><div id="UNIQUE_TARGET_NAME"></div>`
 
 **Notes**
 
@@ -66,6 +84,10 @@ This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may c
 
 == Changelog ==
 
+= 1.3 =
+* Added carousel pager (thumbnails) and embed functionalities.
+
+
 = 1.2 =
 * Added 'options' shortcode attribute for customized slideshows; default display changes (css); more robust Javascript functions including recentering of images after window load.
 
@@ -76,6 +98,9 @@ This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may c
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.3 =
+Plugin now supports carousel pager (thumbnails) navigation and embed functionality (experimental).
 
 = 1.2 =
 Plugin now supports 'options' shortcode attribute for customizing slideshows; default display and functionality improved.
