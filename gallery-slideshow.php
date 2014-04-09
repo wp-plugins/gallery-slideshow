@@ -2,7 +2,7 @@
 /*
 Plugin Name: Gallery <-> Slideshow
 Description: Turn any WordPress gallery into a slideshow using the "gss" shortcode.
-Version: 1.3
+Version: 1.3.1
 Author: Jethin
 Author URI: http://s89693915.onlinehome.us/wp/?page_id=4
 License: GPL2
@@ -63,36 +63,5 @@ function gss_embed_metadata( $post_id ){
 	// if( has_shortcode( $post_object->post_content, 'gss' ) ) { }
 }
 add_action( 'save_post', 'gss_embed_metadata' );
-
-?>div></div>';
-		if( !$has_captions ){
-			$html .= $pager;
-		}
-		if( $has_captions ){
-			$html .= 		'<div class="gss-long-cap">' . $longest_cap['text'] . "\n\t\t</div>";
-			$html .= 		'<div id="' . $name . '_captions" class="gss-captions">' . "\n\t\t</div>";
-		}
-		$html .= "\n\t</div>\n</div>\n\n";
-        return $html;
-    }
-
-    static function gss_enqueue_scripts() {
-        wp_register_script( 'cycle2', plugins_url( 'jquery.cycle2.min.js' , __FILE__ ), array('jquery'), '2.0.2' );
-		wp_register_script( 'cycle2_center', plugins_url( 'jquery.cycle2.center.min.js' , __FILE__ ), array('cycle2'), 'v20140114' );
-		wp_register_script( 'gss_js', plugins_url( 'gss.js', __FILE__ ) );
-		wp_register_style( 'gss_css', plugins_url( 'gss.css', __FILE__ ) );
-		wp_enqueue_script( 'cycle2' );
-		wp_enqueue_script( 'cycle2_center' );
-		wp_enqueue_script( 'gss_js' );
-		wp_enqueue_style( 'gss_css' );
-		$custom_js = plugin_dir_path( __FILE__ ) . 'gss-custom.js';
-		if ( file_exists($custom_js) ) {
-			wp_register_script( 'gss-custom-js', plugins_url( 'gss-custom.js' , __FILE__ ) );
-			wp_enqueue_script( 'gss-custom-js' );
-		}
-    }
-}
-
-gallery_ss::init();
 
 ?>

@@ -3,11 +3,11 @@ Contributors: jethin
 Tags: slideshow, gallery
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 1.3
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Turn any WordPress gallery into a simple, robust, lightweight and responsive slideshow.
+Turn any WordPress gallery into a simple, robust, lightweight and fluid slideshow.
 
 == Description ==
 
@@ -84,6 +84,9 @@ This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may c
 
 == Changelog ==
 
+= 1.3.1 =
+* Fixed header bug from version 1.3 uploaded to WordPress.
+
 = 1.3 =
 * Added carousel pager (thumbnails) and embed functionalities.
 
@@ -98,6 +101,9 @@ This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may c
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.3.1 =
+Fixed header bug from version 1.3 uploaded to WordPress.
 
 = 1.3 =
 Plugin now supports carousel pager (thumbnails) navigation and embed functionality (experimental).
