@@ -14,11 +14,11 @@ function gss_html_output($ids,$name,$style,$options,$carousel) {
 	$pager = "\n\t\t\t<div id=\"" . $name . '_pager" class="gss-pager"></div>';
 	foreach( $ids as $image_id ){
 		$attachment = get_post( $image_id, 'ARRAY_A' );
-		$src = $attachment['guid'];
+		$src = wp_get_attachment_image_src( $image_id, 'full' );
 		$excerpt = htmlspecialchars($attachment['post_excerpt']);
-		$slides .= "\n\t\t\t<img src=\"$src\" alt=\"$excerpt\" />\n";
+		$slides .= "\n\t\t\t<img src=\"$src[0]\" alt=\"$excerpt\" />\n";
 		if( !empty($carousel) ){
-			$carousel_slides .= "\t\t\t<div><img src=\"$src\" title=\"$excerpt\" /></div>\n";
+			$carousel_slides .= "\t\t\t<div><img src=\"$src[0]\" title=\"$excerpt\" /></div>\n";
 		}
 		if( strlen( $attachment['post_excerpt'] ) > $longest_cap['length'] ){
 			$longest_cap['length'] = strlen( $attachment['post_excerpt'] );
