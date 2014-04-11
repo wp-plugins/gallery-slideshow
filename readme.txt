@@ -84,9 +84,11 @@ This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may c
 
 == Changelog ==
 
+= 1.3.1 =
+Fixed header bug from version 1.3 uploaded to WordPress.
+
 = 1.3 =
 * Added carousel pager (thumbnails) and embed functionalities.
-
 
 = 1.2 =
 * Added 'options' shortcode attribute for customized slideshows; default display changes (css); more robust Javascript functions including recentering of images after window load.
@@ -98,6 +100,9 @@ This plugin uses [jQuery Cycle2](http://jquery.malsup.com/cycle2/). Cycle2 may c
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.3.1 =
+Fixed header bug from version 1.3 uploaded to WordPress.
 
 = 1.3 =
 Plugin now supports carousel pager (thumbnails) navigation and embed functionality (experimental).
