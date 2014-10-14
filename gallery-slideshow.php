@@ -49,9 +49,12 @@ function gss_embed_metadata( $post_id ){
 	$post_object = get_post( $post_id );
 	$pattern = get_shortcode_regex();
     if ( preg_match_all( '/'. $pattern .'/s', $post_object->post_content, $matches )
-		&& array_key_exists( 2, $matches )
-		&& in_array( 'gss', $matches[2] ) ){
-			foreach( $matches[3] as $atts_string ){
+	  && array_key_exists( 2, $matches )
+	  && in_array( 'gss', $matches[2] ) ){
+		// print_r($matches);
+		foreach( $matches[2] as $k => $sc_name ){ 
+			if( $sc_name == 'gss' ){
+				$atts_string =  $matches[3][$k];
 				$atts_string = trim( $atts_string );
 				$atts = shortcode_parse_atts( $atts_string );
 				$name = 'gss_' . $post_id;
@@ -59,6 +62,7 @@ function gss_embed_metadata( $post_id ){
 				// extract( shortcode_atts( array( 'ids' => '', 'name' => 'gslideshow', 'style' => '', 'options' => '', $carousel ), $atts ) );
 				update_post_meta($post_id, $name, $atts_string);
 			}
+		}
     }
 	// if( has_shortcode( $post_object->post_content, 'gss' ) ) { }
 }
